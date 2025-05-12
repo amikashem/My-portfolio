@@ -219,20 +219,21 @@
           <li><a href="https://linkedin.com/in/abul-kashem" target="_blank">LinkedIn</a></li>
         </ul>
       </div>
+  
       <!-- Contact Form -->
-      <div class="contact-form">
-         <form action="https://formspree.io/f/mjkyzjre" id="contact-form" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn-primary">Send Message</button>
-        </form>
-         <div id="thank-you-message">
-    <p>Thank you! Your message has been successfully sent.<br />
-    I will contact you very soon.</p>
-  </div>
+<div class="contact-form">
+  <form action="https://formspree.io/f/mjkyzjre" id="contact-form" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn-primary">Send Message</button>
+  </form>
 
-      </div>
+  <div id="thank-you-message" style="display: none; margin-top: 20px; color: green;">
+    <p>Thank you! Your message has been successfully sent.<br />
+      I will contact you very soon.</p>
+  </div>
+</div>
       
     </div>
   </div>
@@ -283,6 +284,30 @@
 
   </div>
 </footer>
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent default form submit
 
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        form.reset();
+        document.getElementById("thank-you-message").style.display = "block";
+      } else {
+        alert("Oops! There was a problem submitting your form.");
+      }
+    }).catch(error => {
+      alert("Something went wrong. Please try again later.");
+    });
+  });
+</script>
 </body>
 </html>
