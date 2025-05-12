@@ -315,7 +315,14 @@
     const nav = document.querySelector('.nav');
     const navList = nav.querySelector('ul');
 
-    nav.addEventListener('click', function () {
+    // Create the hamburger button
+    const toggleBtn = document.createElement('div');
+    toggleBtn.classList.add('nav-toggle');
+    toggleBtn.innerHTML = '&#9776;';
+    nav.insertBefore(toggleBtn, nav.firstChild);
+
+    // Toggle menu visibility
+    toggleBtn.addEventListener('click', function () {
       navList.classList.toggle('active');
     });
   });
