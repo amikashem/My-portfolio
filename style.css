@@ -88,16 +88,19 @@ h1, h2, h3, h4 {
 }
 
 /* Mobile hamburger style */
-.nav::before {
-  content: "\2630"; /* Unicode hamburger icon */
+.nav-toggle {
+  display: none;
   font-size: 28px;
   color: #fff;
   cursor: pointer;
-  display: none;
   padding: 10px;
 }
 
 @media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
   .nav ul {
     display: none;
     flex-direction: column;
@@ -110,11 +113,8 @@ h1, h2, h3, h4 {
   .nav ul.active {
     display: flex;
   }
-
-  .nav::before {
-    display: block;
-  }
 }
+
 /* Hero */
 .hero {
   height: 100vh;
