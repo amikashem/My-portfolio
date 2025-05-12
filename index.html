@@ -309,5 +309,16 @@
     });
   });
 </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const nav = document.querySelector('.nav');
+    const navList = nav.querySelector('ul');
+
+    nav.addEventListener('click', function () {
+      navList.classList.toggle('active');
+    });
+  });
+</script>
 </body>
 </html>
