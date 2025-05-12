@@ -257,7 +257,83 @@ h1, h2, h3, h4 {
   font-weight: bold;
   text-decoration: none;
 }
+/* test contact */ 
+  .contact-container {
+    max-width: 100%;
+    padding: 30px;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
 
+  .contact-container h2 {
+    text-align: center;
+    color: #0d47a1;
+    margin-bottom: 20px;
+  }
+
+  .contact-container label {
+    display: block;
+    margin-top: 15px;
+    color: #0d47a1;
+    font-weight: bold;
+  }
+
+  .contact-container input,
+  .contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #64b5f6;
+    border-radius: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+    resize: vertical;
+  }
+
+  .contact-container button {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #0d47a1;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .contact-container button:hover {
+    background-color: #1565c0;
+  }
+
+  #thank-you-message {
+    display: none;
+    text-align: center;
+    margin-top: 30px;
+    color: #0d47a1;
+    font-size: 18px;
+  }
+
+  #read-more-button {
+    display: none;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  #read-more-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0d47a1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+
+  #read-more-button a:hover {
+    background-color: #1565c0;
+  }
 /* Contact */
 .contact {
   padding: 80px 0;
