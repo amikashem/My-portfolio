@@ -314,26 +314,7 @@ h1, h2, h3, h4 {
     color: #0d47a1;
     font-size: 18px;
   }
-
-  #read-more-button {
-    display: none;
-    text-align: center;
-    margin-top: 15px;
-  }
-
-  #read-more-button a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0d47a1;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-  }
-
-  #read-more-button a:hover {
-    background-color: #1565c0;
-  }
+ 
 /* Contact */
 .contact {
   padding: 80px 0;
