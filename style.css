@@ -46,9 +46,11 @@ h1, h2, h3, h4 {
 }
 
 
+/* Base styles for the navigation */
 .nav {
   background-color: #333;
   padding: 10px 20px;
+  position: relative;
 }
 
 .nav ul {
@@ -58,7 +60,7 @@ h1, h2, h3, h4 {
   gap: 20px;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  flex-wrap: wrap;
 }
 
 .nav a {
@@ -73,34 +75,20 @@ h1, h2, h3, h4 {
   text-decoration: underline;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-  .nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .nav a {
-    padding: 10px;
-    font-size: 16px;
-  }
-}
-
-/* Mobile hamburger style */
+/* Hamburger menu styles */
 .nav-toggle {
   display: none;
   font-size: 28px;
   color: #fff;
   cursor: pointer;
   padding: 10px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
 }
 
+/* Responsive styles */
 @media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
-
   .nav ul {
     display: none;
     flex-direction: column;
@@ -112,6 +100,10 @@ h1, h2, h3, h4 {
 
   .nav ul.active {
     display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
   }
 }
 
