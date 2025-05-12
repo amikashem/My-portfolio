@@ -315,13 +315,13 @@
     const nav = document.querySelector('.nav');
     const navList = nav.querySelector('ul');
 
-    // Create the hamburger button
+    // Create hamburger
     const toggleBtn = document.createElement('div');
     toggleBtn.classList.add('nav-toggle');
-    toggleBtn.innerHTML = '&#9776;'; // Unicode for hamburger icon
+    toggleBtn.innerHTML = '&#9776;';
     nav.insertBefore(toggleBtn, nav.firstChild);
 
-    // Toggle menu visibility
+    // Toggle visibility
     toggleBtn.addEventListener('click', function () {
       navList.classList.toggle('active');
     });
