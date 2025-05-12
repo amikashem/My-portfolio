@@ -87,6 +87,34 @@ h1, h2, h3, h4 {
   }
 }
 
+/* Mobile hamburger style */
+.nav::before {
+  content: "\2630"; /* Unicode hamburger icon */
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+  }
+
+  .nav ul.active {
+    display: flex;
+  }
+
+  .nav::before {
+    display: block;
+  }
+}
 /* Hero */
 .hero {
   height: 100vh;
