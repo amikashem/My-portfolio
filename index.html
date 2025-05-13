@@ -315,24 +315,15 @@
     });
   });
 </script>
-
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const nav = document.querySelector('.nav');
-    const navList = nav.querySelector('ul');
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
 
-    // Create the hamburger button
-    const toggleBtn = document.createElement('div');
-    toggleBtn.classList.add('nav-toggle');
-    toggleBtn.innerHTML = '&#9776;'; // Unicode for hamburger icon
-    nav.insertBefore(toggleBtn, nav.firstChild);
-
-    // Toggle menu visibility
-    toggleBtn.addEventListener('click', function () {
-      navList.classList.toggle('active');
-    });
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
   });
 </script>
+
 
 </body>
 </html>
