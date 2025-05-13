@@ -12,23 +12,25 @@
    <!-- Header -->
   <header class="site-header">
     <div class="container">
-      <div class="logo">Natunkicho</div>
-      <!--- <div class="logo">
-  <a href="index.html">
-    <img src="images/Log.jpg" alt="Natunkicho Logo" class="logo-img">
-  </a>
-</div>---> 
+    <!-- Logo -->
+    <div class="logo">
+      <a href="https://natunkicho.com" target="_blank">Natunkicho</a>
+    </div>
 
-      <nav class="nav">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
 
     </div>
   </header>
@@ -321,6 +323,14 @@
   });
 </script>
 
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 
 
 </body>
