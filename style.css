@@ -46,65 +46,68 @@ h1, h2, h3, h4 {
 }
 
 /* Base styles for the navigation */
-.nav {
-  background-color: #333;
-  padding: 10px 20px;
-  position: relative;
-}
-
-.nav ul {
+.navbar {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
   list-style: none;
-  justify-content: center;
+  display: flex;
   gap: 20px;
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap;
 }
 
-.nav a {
+.nav-links li a {
+  color: #fff;
   text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  padding: 8px 12px;
-  display: block;
+  font-size: 18px;
 }
 
-.nav a:hover {
-  text-decoration: underline;
-}
-
-/* Hamburger menu styles */
-.nav-toggle {
+/* Hamburger Menu */
+.hamburger {
   display: none;
-  font-size: 28px;
-  color: #fff;
+  flex-direction: column;
   cursor: pointer;
-  padding: 10px;
-  position: absolute;
-  right: 20px;
-  top: 10px;
 }
 
-/* Responsive styles */
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .nav ul {
-    display: none;
-    flex-direction: column;
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 60px;
     background-color: #333;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 6px;
+    flex-direction: column;
+    width: 100%;
+    display: none;
   }
 
-  .nav ul.active {
+  .nav-links.active {
     display: flex;
   }
 
-  .nav-toggle {
-    display: block;
+  .hamburger {
+    display: flex;
   }
 }
+
 /* Hero */
 .hero {
   height: 100vh;
