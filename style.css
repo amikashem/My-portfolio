@@ -175,6 +175,31 @@ h1, h2, h3, h4 {
   background-position: center;
   position: relative;
 }
+.hero-buttons .btn {
+  padding: 12px 25px;
+  background: #00c897;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 5px;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.hero-buttons .btn:hover {
+  background: #009e7f;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #00c897;
+}
+
+.btn-outline:hover {
+  background: #00c897;
+  color: white;
+}
 
 .hero .btn-primary {
   background-color: #fff;
